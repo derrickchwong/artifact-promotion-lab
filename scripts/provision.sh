@@ -198,8 +198,6 @@ gcloud container binauthz attestors add-iam-policy-binding "development-attestor
   --role "roles/binaryauthorization.attestorsViewer"
 
 echo -e "${FANCY_NONE} development-signer iam-policy"
-#TODO: what should the member be?
-# this will likely be the user
 gcloud kms keys add-iam-policy-binding "development-signer" \
   --project "${PROJECT_ID}" \
   --location "${REGION}" \
