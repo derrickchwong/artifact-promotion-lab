@@ -63,6 +63,14 @@ gcloud iam service-accounts add-iam-policy-binding ${QA_ATTESTOR_SA_EMAIL} \
     --member="user:${QWIKLAB_USER_EMAIL}" \
     --role="roles/iam.serviceAccountAdmin"
 
+gcloud projects add-iam-policy-binding ${PROJECT_ID} \
+    --member=serviceAccount:${DEV_ATTESTOR_SA_EMAIL} \
+    --role=roles/containeranalysis.occurrences.editor
+
+gcloud projects add-iam-policy-binding ${PROJECT_ID} \
+    --member=serviceAccount:${QA_ATTESTOR_SA_EMAIL} \
+    --role=roles/containeranalysis.occurrences.editor
+
 #############################
 # GKE clusters
 #############################
