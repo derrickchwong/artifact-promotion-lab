@@ -1,4 +1,3 @@
-
 # Copyright 2021 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -82,6 +81,7 @@ gcloud container clusters create "qa-cluster" \
   --machine-type "n1-standard-1" \
   --region "${REGION}" \
   --num-nodes "1" \
+  --node-locations "${ZONE}" \
   --enable-binauthz &
 
 QA_CLUSTER_PID=$!
@@ -92,6 +92,7 @@ gcloud container clusters create "prod-cluster" \
   --machine-type "n1-standard-1" \
   --region "${REGION}" \
   --num-nodes "1" \
+  --node-locations "${ZONE}" \
   --enable-binauthz &
 
 PROD_CLUSTER_PID=$!
