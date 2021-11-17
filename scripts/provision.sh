@@ -301,9 +301,7 @@ wait $PROD_CLUSTER_PID
 
 
 echo -e "${FANCY_OK} Done"
-
-echo -e "${FANCY_NONE} Sleeping"
-
-sleep 1800
-
-
+#
+# echo -e "${FANCY_NONE} Sleeping"
+# 
+# sleep 1800
